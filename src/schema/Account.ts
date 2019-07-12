@@ -59,7 +59,7 @@ export default class Account {
     derive()
   }
 
-  getSecretArray(): Array<string> {
+  getSecret(): Array<string> {
     return this.secret
   }
 
