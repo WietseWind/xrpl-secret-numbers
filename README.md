@@ -7,7 +7,7 @@ The common formats for XRPL account secrets are (at the time of writing this, Ju
 - Family Seed, eg. `sh1HiK7SwjS1VxFdXi7qeMHRedrYX`
 - Mnemonic, eg. `car banana apple road ...`
 
-These formats are prone to typo's and not that user friendly. They may be especially intimidating for the public that's relatively new to cryptocurrencies / blockchain technology.
+These formats are prone to typo's and not that user friendly. Using numbers means it's language (spoken, written) agnostic as well. They may be especially intimidating for the public that's relatively new to cryptocurrencies / blockchain technology.
 
 This library encodes the entropy to generate accounts into 8 chunks of 6 digits, of which 5 digits are 1/8th of the entropy, and a 6th digit contains a checksum allowing realtime typo detection.
 
