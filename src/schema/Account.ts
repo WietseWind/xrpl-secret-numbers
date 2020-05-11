@@ -28,7 +28,7 @@ export default class Account {
     }
   }
 
-  constructor(SecretNumbers?: Array<string> | string) {
+  constructor(SecretNumbers?: Array<string> | string | Buffer) {
     const asserts = (): void => {
       assert.strictEqual(this.secret.length, 8)
       this.secret.forEach((r, i) => {
@@ -51,6 +51,8 @@ export default class Account {
       this.secret = utils.parseSecretString(SecretNumbers)
     } else if (Array.isArray(SecretNumbers)) {
       this.secret = SecretNumbers
+    } else if (Buffer.isBuffer(SecretNumbers)) {
+      this.secret = utils.entropyToSecret(SecretNumbers)
     } else {
       this.secret = utils.randomSecret()
     }

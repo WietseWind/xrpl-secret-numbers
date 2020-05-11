@@ -16,3 +16,11 @@ console.log(`\n  Imported account address\n    `, importedAccount.getAddress())
 console.log(`\n  Imported account family seed\n    `, importedAccount.getFamilySeed())
 
 console.log(`\n\n`)
+
+const entropy = Buffer.from('0123456789ABCDEF0123456789ABCDEF', 'hex')
+console.log(`😎 Import account from entropy buffer "${entropy.toString('hex')}"`)
+const entropyAccount = new Account(entropy)
+console.log(`\n  Imported account address\n    `, entropyAccount.getAddress())
+console.log(`\n  Imported account family seed\n    `, entropyAccount.getFamilySeed())
+
+console.log(`\n\n`)

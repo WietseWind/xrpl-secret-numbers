@@ -15,6 +15,22 @@ describe('API: XRPL Secret Numbers', () => {
     })
   })
 
+  describe('Account based on entropy', () => {
+    const entropy = Buffer.from('0123456789ABCDEF0123456789ABCDEF', 'hex')
+    const account = new Account(entropy)
+
+    it('familySeed as expected', () => {
+      expect(account.getFamilySeed()).toEqual('sp5DmDCut79BpgumfHhvRzdxXYQyU')
+    })
+    it('address as expected', () => {
+      expect(account.getAddress()).toEqual('rMCcybKHfwCSkDHd3M36PAeUniEoygwjR3')
+    })
+    it('Account object to string as expected', () => {
+      const accountAsStr = '002913 177673 352434 527196 002910 177672 352435 527190'
+      expect(`${account}`).toEqual(accountAsStr)
+    })
+  })
+
   describe('Account based on existing secret', () => {
     const secret = [
       '084677', '005323', '580272', '282388', '626800', '105300', '560913', '071783'
