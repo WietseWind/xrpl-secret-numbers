@@ -39,6 +39,14 @@ const secret = '399150 474506 009147 088773 432160 282843 253738 605430'
 const account = new Account(secret)
 ```
 
+Or importing with custom entropy (buffer, 16):
+
+```
+const {Account} = require('xrpl-secret-numbers')
+const entropy = Buffer.from('0123456789ABCDEF0123456789ABCDEF', 'hex')
+const account = new Account(entropy)
+```
+
 ##### After generating / importing:
 
 You can fetch the account details (address, secret, etc.) using these methods:
