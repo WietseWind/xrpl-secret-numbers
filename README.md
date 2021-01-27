@@ -1,5 +1,9 @@
 # XRPL Secret Numbers [![npm version](https://badge.fury.io/js/xrpl-secret-numbers.svg)](https://www.npmjs.com/xrpl-secret-numbers)
 
+For more background information, please read the [proposed Standard](https://github.com/xrp-community/standards-drafts/issues/15).
+
+A tool to convert Secret Nubmers to the widely used Family Seed `s...` format is [available here](https://github.com/WietseWind/secret-numbers-to-family-seed/releases)
+
 #### Generate XRPL Accounts with a number-based secret: 8 chunks of 6 digits.
 
 The common formats for XRPL account secrets are (at the time of writing this, July 2019):
