@@ -25,7 +25,7 @@
     "ripple-keypairs": "^1.0.3"
   },
   "devDependencies": {
-    "@types/jest": "^24.9.1",
+    "@types/jest": "^26.0.20",
     "@types/node": "^12.12.28",
     "browserify": "^17.0.0",
     "jest": "^26.6.3",
