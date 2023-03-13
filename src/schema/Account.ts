@@ -1,5 +1,5 @@
 import assert from 'assert'
-import keypairs from 'ripple-keypairs'
+import * as keypairs from 'ripple-keypairs'
 import * as utils from '../utils'
 
 /* Types ==================================================================== */

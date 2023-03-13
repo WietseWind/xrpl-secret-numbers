@@ -1,4 +1,4 @@
-import keypairs from 'ripple-keypairs'
+import * as keypairs from 'ripple-keypairs'
 import {Account, Utils} from '../src'
 
 describe('API: XRPL Secret Numbers', () => {
